@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import sqlite3
+import os
 
 # --- Bot Setup ---
 
@@ -105,5 +106,6 @@ async def medhat(ctx):
     await ctx.send(help_text)
 
 # --- Run the Bot ---
-bot.run('MTM2ODE5MTA2MDA2ODY2NzQ2Mw.GVMPGu.4bGLbxzK10NZjD_zNlOQUv4yy_u95CT7Dik-PU')
+token = os.getenv('DISCORD_TOKEN')
+bot.run(token)
  
